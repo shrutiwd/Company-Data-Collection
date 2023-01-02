@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Company Details</title>
+    {% load static %}
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<body>
+    <div class="container-fluid">
+        <h2 class="text-center"><u>Company Data</u></h2><br>
+        <center><a href="/" class="btn btn-primary">Add New Company</a></center>
+
+        <table class="table table-light table-striped">
+            <thead>
+                <tr>
+                    <th>exchange</th>
+                    <th>symbol</th>
+                    <th>short_name</th>
+                    <th>long_name</th>
+                    <th>sector</th>
+                    <th>industry</th>
+                    <th>current_price</th>
+                    <th>market_cap</th>
+                    <th>ebitda</th>
+                    <th>revenue_growth</th>
+                    <th>city</th>
+                    <th>state</th>
+                    <th>country</th>
+                    <th>fulltime_employees</th>
+                    <!-- <th>long_business_summary</th>   -->
+                    <th>weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- jinja2 Technique -->
+                {% if d %}
+                {% for form in d %}
+                <tr>
+                    <td>{{ form.Exchange }}</td>
+                    <td>{{ form.Symbol }}</td>
+                    <td>{{ form.Shortname }}</td>
+                    <td>{{ form.Longname }}</td>
+                    <td>{{ form.Sector }}</td>
+                    <td>{{ form.Industry }}</td>
+                    <td>{{ form.Currentprice }}</td>
+                    <td>{{ form.Marketcap }}</td>
+                    <td>{{ form.Ebitda }}</td>
+                    <td>{{ form.Revenuegrowth }}</td>
+                    <td>{{ form.City }}</td>
+                    <td>{{ form.State }}</td>
+                    <td>{{ form.Country }}</td>
+                    <td>{{ form.Fulltimeemployees }}</td>
+                    <!-- <td>{{ form.Longbusinesssummary }}</td>   -->
+                    <td>{{ form.Weight }}</td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+</body>
+
+</html>
