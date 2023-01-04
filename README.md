@@ -10,8 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 #### Setup
 The first thing to do is to clone the repository:
 ```
-$ git clone https://github.com/shrutiwd/treety.git
-$ cd treety
+$ git clone https://github.com/shrutiwd/Company-Data-Collection.git
+$ cd Company-Data-Collection
 ```
 Install the dependencies:
 ``` 
